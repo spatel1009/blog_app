@@ -31,6 +31,9 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'  
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard', '~> 2.15'
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  gem 'guard-cucumber', '~> 2.1', '>= 2.1.2'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
