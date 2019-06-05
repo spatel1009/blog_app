@@ -1,0 +1,10 @@
+<% @articles.each do |art| %>
+  <div class='well well-lg', id='index-bg'>
+    <div class='article-title'>
+      <%= link_to art.title, article_path(art), id: 'index-link' %>
+    </div>
+    <div class='article-body'>
+      <%= truncate(art.body, length: 250) %>
+    </div>
+  </div>
+<% end %>
