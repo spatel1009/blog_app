@@ -1,0 +1,17 @@
+<%= form_for(@article, html: {class: 'form-horizontal', role: 'form'}) do |f| %>
+
+  <%= render 'errors' %>
+
+  <div class='form_fields'>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Title of article', autofocus: true %>
+  </div>
+  <div class='form_fields'>
+    <%= f.label :body %>
+    <%= f.text_area :body, rows: 10, class: 'form-control', placeholder: 'Body of article' %>
+  </div>  
+  <div class='form_fields'>
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+          
+<% end %>

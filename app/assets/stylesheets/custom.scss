@@ -1,3 +1,4 @@
+$enable-flex: true;
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
@@ -104,13 +105,22 @@ body {
 
 .card-header {
   margin-top: 0;
+  text-align: center;
+}
+
+.card-body {
+  text-align: center;
 }
 
 .card {
   margin-top: 25px;
   margin: auto;
-  text-align: center;
   width: 75%;
   background-color: rgb(218, 219, 219);
   box-shadow: -5px 10px 60px -4px rgba(0,0,0,0.66);
 }
+
+.card-footer {
+  height: 50px;
+}
+

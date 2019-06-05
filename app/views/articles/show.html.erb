@@ -7,7 +7,17 @@
       <%= @article.body %>
     </p>  
   </div>
-  <div class="card-footer text-muted">
-    Created on: <%= @article.created_at.strftime("%b %d, %Y") %>
+  <div class='card-footer'>
+    <div class="row">
+      <div class="col-sm-9"> 
+        Created on: <%= @article.created_at.strftime("%b %d, %Y") %>
+      </div>
+      <div class="col-sm-2">
+        <%= link_to "Edit Article", edit_article_path(@article), class: 'btn btn-primary' %>
+      </div>
+      <div class="col-sm-1">
+        Delete
+      </div>
+    </div>
   </div>
 </div>
