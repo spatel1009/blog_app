@@ -6,7 +6,7 @@ body {
   padding-top: 80px;
   margin: 0 15px;
   color: rgb(17, 48, 224);
-  background-color: rgb(185, 188, 189);
+  background-color: rgb(226, 226, 226);
 }
 
 #error_explanation {
@@ -93,11 +93,6 @@ body {
   padding-left: 25px;
 }
 
-.article-detail {
-  margin-top: 20px;
-  color: #0000ff;
-}
-
 #index-bg {
   background-color: rgb(205, 211, 212);
   margin-top: 5px;
@@ -106,4 +101,16 @@ body {
 #index-link {
   color: rgb(17, 48, 224)
 }
- 
+
+.card-header {
+  margin-top: 0;
+}
+
+.card {
+  margin-top: 25px;
+  margin: auto;
+  text-align: center;
+  width: 75%;
+  background-color: rgb(218, 219, 219);
+  box-shadow: -5px 10px 60px -4px rgba(0,0,0,0.66);
+}

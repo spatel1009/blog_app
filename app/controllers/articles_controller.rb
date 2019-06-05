@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  # before_action :set_article
+  before_action :set_article, only: [:show]
   
   def index
     @articles = Article.all
@@ -19,6 +19,9 @@ class ArticlesController < ApplicationController
       flash.now[:danger] = 'Article has not been created'
       render 'new'
     end
+  end
+
+  def show
   end
 
   private
