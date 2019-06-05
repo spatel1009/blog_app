@@ -1,12 +1,16 @@
 <%= link_to 'New Article', new_article_path, class: 'btn btn-default btn-lg', id: 'new-article-btn' %>
 
-<% @articles.each do |art| %>
-  <div class='well well-lg', id='index-bg'>
-    <div class='article-title'>
-      <%= link_to art.title, article_path(art), id: 'index-link' %>
+<% if @articles.empty? %>
+  <h1 id='no-articles'>No Articles Created</h1>
+<% else %>
+  <% @articles.each do |art| %>
+    <div class='well well-lg', id='index-bg'>
+      <div class='article-title'>
+        <%= link_to art.title, article_path(art), id: 'index-link' %>
+      </div>
+      <div class='article-body'>
+        <%= truncate(art.body, length: 250) %>
+      </div>
     </div>
-    <div class='article-body'>
-      <%= truncate(art.body, length: 250) %>
-    </div>
-  </div>
+  <% end %>
 <% end %>
