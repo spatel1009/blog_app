@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   # before_action :set_article
   
   def index
+    @articles = Article.all
   end
 
   def new
@@ -12,7 +13,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      flash.now[:success] = 'Article has been created'
+      flash[:success] = 'Article has been created'
       redirect_to articles_path
     else 
       flash.now[:danger] = 'Article has not been created'
