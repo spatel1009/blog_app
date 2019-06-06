@@ -121,4 +121,16 @@ body {
   box-shadow: -5px 10px 60px -4px rgba(0,0,0,0.66);
 }
 
+.form-btn {
+  width: 100%;
+}
 
+.btn-login,
+.btn-signup {
+  background-color: rgb(17, 48, 224);
+  color: white;
+}
+
+.btn-forgot {
+  color: #2B2D42;
+}
