@@ -1,7 +1,7 @@
 <% @articles.each do |art| %>
   <div class='well well-lg', id='index-bg'>
     <div class='article-title'>
-      <%= link_to art.title, article_path(art), id: 'index-link' %>
+      <%= link_to art.title, article_path(art), id: 'index-link', style: "color: #449DD1" %>
     </div>
     <div class='article-body'>
       <%= truncate(art.body, length: 250) %>
