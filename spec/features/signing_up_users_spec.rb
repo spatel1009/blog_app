@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Listing Articles' do
+RSpec.feature 'Registering a User' do
 
   scenario 'with valid credentials' do
     visit '/'
