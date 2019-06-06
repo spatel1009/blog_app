@@ -16,6 +16,7 @@ gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'autoprefixer-rails', '~> 9.6'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'rails-ujs', '~> 0.1.0'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 
 group :development, :test do  
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
