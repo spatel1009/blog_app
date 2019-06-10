@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.feature 'Show Articles' do
 
   before do
-    @article1 = Article.create(title: 'The first article', body: 'The first body.')
+    @john = User.create!(email: 'test123@test.com', password: '123456')
+    @article1 = Article.create(title: 'The first article', body: 'The first body.', user_id: @john.id)
 
     visit '/'
   end

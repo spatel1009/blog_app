@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.feature 'Listing Articles' do
 
   before do
-    @article1 = Article.create(title: 'The first article', body: 'The first body.')
-    @article2 = Article.create(title: 'The second article', body: 'The second body.')
+    @john = User.create!(email: 'test123@test.com', password: '123456')
+    @article1 = Article.create(title: 'The first article', body: 'The first body.', user_id: @john.id)
+    @article2 = Article.create(title: 'The second article', body: 'The second body.', user_id: @john.id)
   end
 
   scenario 'Newly created articles by user are listed' do
