@@ -6,6 +6,7 @@ RSpec.feature 'Editing an article' do
     @john = User.create!(email: 'test123@test.com', password: '123456')
     @article = Article.create(title: 'The first article', body: 'The first body.', user_id: @john.id)
 
+    login_as(@john)
     visit '/'
     click_link('index-link')
   end
