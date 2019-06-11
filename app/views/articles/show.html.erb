@@ -22,7 +22,8 @@
     <h3 class='text-left'>Comments:</h3>
   </div>
 </div>
-
-<%= render @article.comments %>
+<div id='messages'>
+  <%= render @article.comments %>
+</div>
 <hr>
 <%= render 'comments/comment_form' %>
