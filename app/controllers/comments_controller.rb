@@ -2,6 +2,13 @@ class CommentsController < ApplicationController
   before_action :set_article
   before_action :authenticate_user!
 
+  def new
+    @comment = Comment.new
+    respond_to do |f|
+      f.js 
+    end
+  end
+
   def create
     @comment = @article.comments.build(comment_params)
     @comment.user = current_user

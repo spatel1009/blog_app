@@ -9,21 +9,32 @@
   </div>
   <div class='card-footer'>
     <div class="row">
-      <div class="col-md-8"> 
+      <div class="col-lg-8"> 
         Created on: <%= @article.created_at.strftime("%b %d, %Y") %>
       </div>
       <%= article_owner %>
     </div>
   </div>
-  <hr>
-</div>
-<div class='card'>
-  <div class='card-header'>
-    <h3 class='text-left'>Comments:</h3>
-  </div>
-</div>
-<div id='messages'>
-  <%= render @article.comments %>
 </div>
 <hr>
-<%= render 'comments/comment_form' %>
+
+<div id='comments-form'></div>
+
+<div id='comments-display'>
+  <div class='card'>
+    <div class='card-header'>
+      <div class='row'>
+        <div class='col-lg-8'>
+          <h3 class='text-left'>Comments</h3>
+        </div>
+        <div class='col-lg-4'>
+          <%= link_to 'Comment on Article', new_article_comment_path(@article), remote: true, class: 'btn comment-btn' %>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div id='messages'>
+    <%= render @article.comments %>
+  </div>
+</div>

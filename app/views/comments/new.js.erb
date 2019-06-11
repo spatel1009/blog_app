@@ -1,0 +1,6 @@
+$("#comments-form").html("<%= escape_javascript(render partial: 'comments/comment_form') %>");
+$("#comments-display").hide();
+$("#form-submit").submit(function(){
+  $("#comments-form").hide();
+  $("#comments-display").show();
+})
