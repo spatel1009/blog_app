@@ -1,17 +1,15 @@
-<div class='comment-card'>
-  <div class='card'>
-    <div class='card-block'>
-      <div class='row'>
-        <div class='col-md-8'>
-          <div class='card-body'>
-            <%= comment.body %>
-          </div>
-          <div class='card-footer comment-footer'>
-            <%= time_ago_in_words(comment.created_at) %> ago by <%= comment.user.email %>
-          </div>
+<div class='card'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <div class='card-header comment-header'>
+        <strong>Posted by: </strong><%= comment.user.first_name %>
+      </div>
+      <div class='card-body'>
+        <div class='card-text'>
+          <%= comment.body %>
         </div>
-        <hr>
       </div>
     </div>
+    <hr>
   </div>
 </div>

@@ -109,8 +109,12 @@ body {
   text-align: center;
 }
 
+.comment-header {
+  text-align: left;
+}
+
 .card-body {
-  text-align: center;
+  padding: 5px;
 }
 
 .card {
@@ -151,11 +155,4 @@ body {
 
   footer {
     color: #64103F
-  }
-
-  // Comments
-
-  .card-block {
-    color: black;
-    text-align: left;
   }

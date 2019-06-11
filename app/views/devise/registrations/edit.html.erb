@@ -2,7 +2,7 @@
   <div class='col-md-8 col-md-offset-2'>
     <div class='text-center'>
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
-      <h4>(Currently logged in as: <%= "#{current_user.email}" %>)</h4>
+      <h4>(Currently logged in as: <%= "#{current_user.first_name}" + ' ' + "#{current_user.last_name}" %>)</h4>
     </div>
 
     <div>
