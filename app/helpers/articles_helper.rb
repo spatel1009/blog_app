@@ -9,4 +9,11 @@ module ArticlesHelper
     end
   end
 
+  def article_owner
+    if @article.user == current_user then render partial: 'edit_delete' end
+  end
+
+  def user_id?
+    if current_user != nil then render partial: 'create_article' end
+  end
 end

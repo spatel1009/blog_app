@@ -6,12 +6,13 @@ RSpec.feature 'Deleting an article' do
     @john = User.create!(email: 'test123@test.com', password: '123456')
     
     @article = Article.create(title: 'The first article', body: 'The first body.', user_id: @john.id)
+    
     login_as(@john)
+    visit '/'
+    click_link('index-link')
   end
 
   scenario 'A user deletes an article' do
-    visit '/'
-    click_link('index-link')
     click_link('Delete Article')
 
     expect(page).to have_content('Article has been deleted')

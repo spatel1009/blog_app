@@ -8,7 +8,7 @@ RSpec.feature 'Listing Articles' do
     @article2 = Article.create(title: 'The second article', body: 'The second body.', user_id: @john.id)
   end
 
-  scenario 'Newly created articles by user are listed' do
+  scenario 'with articles created and user not signed in' do
     visit '/'
 
     expect(page).to have_content(@article1.title)
@@ -17,6 +17,20 @@ RSpec.feature 'Listing Articles' do
     expect(page).to have_content(@article2.body)
     expect(page).to have_link(@article1.title)
     expect(page).to have_link(@article2.title)
+    expect(page).not_to have_link("New Article")
+  end
+
+  scenario 'with articles created and user signed in' do
+    login_as(@john)
+    visit '/'
+
+    expect(page).to have_content(@article1.title)
+    expect(page).to have_content(@article1.body)
+    expect(page).to have_content(@article2.title)
+    expect(page).to have_content(@article2.body)
+    expect(page).to have_link(@article1.title)
+    expect(page).to have_link(@article2.title)
+    expect(page).to have_link("New Article")
   end
 
   scenario 'A user has no articles' do
