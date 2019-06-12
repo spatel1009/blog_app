@@ -24,13 +24,12 @@ RSpec.describe 'Comments', type: :request do
     context 'with a signed in user' do
       before do
         login_as(@john)
-        post "/articles/#{@article.id}/comments", params: { comment: {body: 'Awesome blog'}}
+        post "/articles/#{@article.id}/comments", xhr: true, params: { comment: {body: 'Awesome blog'}}
       end
       it 'create the comment successfully' do
         flash_message = 'Comment has been created'
 
-        expect(response).to redirect_to(article_path(@article))
-        expect(response.status).to eq 302
+        expect(response.status).to eq 200
         expect(flash[:notice]).to eq flash_message
       end
     end
